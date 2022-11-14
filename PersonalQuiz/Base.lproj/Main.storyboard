@@ -93,7 +93,13 @@
                         <viewLayoutGuide key="safeArea" id="M5B-pJ-2Ez"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Вопрос №" id="0KN-YI-dhw"/>
+                    <navigationItem key="navigationItem" title="Вопрос №" id="0KN-YI-dhw">
+                        <barButtonItem key="rightBarButtonItem" title="=&gt; 3" id="LAA-AE-PJV">
+                            <connections>
+                                <segue destination="4hj-cI-GY1" kind="show" id="ICx-hQ-rpp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="4hj-cI-GY1" kind="show" identifier="showResult" id="FJX-qW-fi3"/>
                     </connections>
@@ -109,14 +115,38 @@
                     <view key="view" contentMode="scaleToFill" id="xjX-nf-7TW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ugl-3x-Esy">
+                                <rect key="frame" x="16" y="289.5" width="343" height="88.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы - 🪲!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REH-tT-1Ak">
+                                        <rect key="frame" x="84.5" y="0.0" width="174.5" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Да, вы Жук!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ysd-Ty-38j">
+                                        <rect key="frame" x="124.5" y="68" width="94" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dQB-4P-NQe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ugl-3x-Esy" firstAttribute="leading" secondItem="dQB-4P-NQe" secondAttribute="leading" constant="16" id="IbR-GP-abP"/>
+                            <constraint firstItem="dQB-4P-NQe" firstAttribute="trailing" secondItem="Ugl-3x-Esy" secondAttribute="trailing" constant="16" id="dcu-li-nXx"/>
+                            <constraint firstItem="Ugl-3x-Esy" firstAttribute="centerY" secondItem="xjX-nf-7TW" secondAttribute="centerY" id="yus-kU-ncn"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Результат" id="Bav-k2-owc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2K-AJ-RNg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2137" y="-35"/>
+            <point key="canvasLocation" x="2136.8000000000002" y="-35.532233883058474"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aWT-24-WUp">
@@ -137,6 +167,9 @@
             <point key="canvasLocation" x="743" y="-36"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="FJX-qW-fi3"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
